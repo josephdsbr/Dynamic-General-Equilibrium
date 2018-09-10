@@ -43,7 +43,7 @@ shinyServer(function(input, output, session) {
   
   output$graph2 <- renderPlotly({
     plot_ly(x = 'Utilidade', y = res$Utilidade, type = 'bar', name = 'Utilidade') %>%
-      layout(yaxis = list(title = '', barmode = 'stack', range = c(0, 10)),
+      layout(yaxis = list(title = '', barmode = 'stack', range = c(0, ifelse(res$Utilidade < 50, 50, 100))),
              xaxis = list(title = 'Valores',showticklabels = FALSE))
   })
   
