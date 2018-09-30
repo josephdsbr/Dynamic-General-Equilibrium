@@ -1,0 +1,7 @@
+Title: Modelo DSGE
+Author: José Vinícius Santos de Melo
+AuthorUrl: https://github.com/josephdsbr
+License: GPL-3
+DisplayMode: Showcase
+Tags: DSGE
+Type: Shiny

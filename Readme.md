@@ -1,0 +1,1 @@
+Essa pequena demonstração do ShinyApp busca demonstrar as potencialidades da aplicação de modelos econômicos como o DSGE (Dynamic Stochastic General Equilibrium) no `R`. Para isto, será demonstrado ao lado o código fonte utilizado na integração entre o Shiny e R. Esperamos que vocês possuam uma boa compreensão e repliquem o modelo.
