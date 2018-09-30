@@ -36,29 +36,17 @@ parms <- fluidRow(
                   value = 70,
                   step = 10),
       sliderInput('alpha',
-                  'Elasticidade Produção-Capital',
+                  'Elasticidade Producao-Capital',
                   min = 0,
                   max = 1,
                   value = 0.75,
                   step = 0.25)
       )
   )
-
-bootstrap <- fluidRow(
-  box(width = 12,
-      title = 'jose',
-      solidHeader = T,
-      collapsible = T,
-      HTML("<head>
-           <script src= 'https://cdn.datacamp.com/datacamp-light-latest.min.js'></script>
-           </head>"))
-      )
-
   
 info <- tabItem(tabName = 'general',
-                box(width = 8,
+                box(width = 12,
                     info1,
                     info2,
                     info3),
-                parms,
-                bootstrap)
+                parms)

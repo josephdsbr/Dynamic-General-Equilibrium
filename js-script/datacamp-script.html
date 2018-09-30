@@ -1,0 +1,54 @@
+<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
+  
+<div data-datacamp-exercise data-lang="r" data-height="500">
+      <code data-type="sample-code">
+        h = 1
+        b = 0.7  
+        p = 1
+        A = 50
+        K = 100
+        alpha = 0.8
+        
+        Consumo=
+        Lazer=
+        Trabalho=
+        Salario=
+        Lambda=
+        Producao=
+        Lucro=
+        Despesas=
+        Utilidade=
+        
+        print(Utilidade)
+      </code>
+      <code data-type="solution">
+        h = 1
+        b = 0.7  
+        p = 1
+        A = 50
+        K = 100
+        alpha = 0.8
+        
+        Consumo=(b*h)^(1 - alpha)*A*K^(alpha)
+        Lazer=(1 - b)*h
+        Trabalho=b*h
+        Salario=((1 - alpha)*A*K**(alpha))/((h*b)**alpha)
+        Lambda=(b**alpha)/((1 - alpha)*A*K**(alpha)*h**(1 - alpha)) 
+        Producao=A*K**alpha*Trabalho**(1-alpha)
+        Lucro=Producao - Salario*Trabalho 
+        Despesas=Salario*Trabalho
+        Utilidade=exp(b*log(Consumo) + (1 - b)*log(Lazer))
+        
+        tabela = data.frame(Consumo, Lazer, Trabalho, Salario, Lambda, Producao, Lucro, Despesas, Utilidade)
+        
+        print(tabela)
+      </code>
+      <code data-type="sct">
+        test_object('Utilidade')
+        test_function('print')
+        success_msg('Bom trabalho')
+      </code>
+      <div data-type="hint">
+        <p>Formule os resultados se utilizando do material e conhecimento fornecidos pelo modelo.</p>
+      </div>
+</div>

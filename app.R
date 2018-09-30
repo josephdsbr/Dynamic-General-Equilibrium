@@ -1,5 +1,7 @@
 ## Application
 require(shinydashboard)
+require(dashboardthemes)
+options(encoding = 'UTF-8')
 #### ui ####
 source(file.path('ui','menu-items.R'), local = T)$value
 source(file.path('ui','table-1.R'), local = T)$value
@@ -13,6 +15,9 @@ sidebar <- dashboardSidebar(
 header <- dashboardHeader(title = 'DSGE')
 
 body <- dashboardBody(
+  shinyDashboardThemes(
+    theme = 'poor_mans_flatly'
+  ),
   tabItems(
     info,
     download,
